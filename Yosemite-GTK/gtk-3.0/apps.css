@@ -1,0 +1,399 @@
+/* Copyright 2011-2015 elementary LLC.
+*
+* This file is part of the elementary GTK theme.
+*
+* The elementary GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The elementary GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/*********
+* Avatar *
+*********/
+
+.avatar {
+    border: 1px solid alpha (#000, 0.35);
+    border-radius: 50%;
+
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
+                inset 0 1px 0 0 alpha (#fff, 0.45),
+                inset 0 -1px 0 0 alpha (#fff, 0.15),
+                0 1px 2px alpha (#000, 0.15),
+                0 2px 6px alpha (#000, 0.10);
+}
+
+/**************
+ * GNOME Crap *
+ *************/
+
+ApDocView, /* Abiword */
+EogScrollView, /* Eog */
+CheeseThumbView /* Cheese */
+{
+    -EogScrollView-shadow-type: none;
+}
+
+CcNetworkPanel GtkNotebook > .frame {
+    border: none;
+}
+
+/**********
+ * Birdie *
+ *********/
+
+BirdieWidgetsTweetList * {
+    background-image: none;
+    background-color: transparent;
+}
+
+.tweet {
+    padding: 0;
+    box-shadow: none;
+}
+
+/*************
+* Calculator *
+*************/
+
+PantheonCalculatorMainWindow {
+    border-radius: 0 0 4px 4px;
+}
+
+PantheonCalculatorMainWindow.window-frame {
+    border-radius: 4px;
+}
+
+/********
+* Files *
+********/
+
+
+GtkFileChooserDialog .entry.pathbar {
+    background-image: linear-gradient(to bottom,
+                                  shade (@base_color, 0.93),
+                                  shade (@base_color, 0.97)
+                                  );
+
+    border-color: @border_color;
+
+    box-shadow: inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
+                inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
+                0 1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.50);
+}
+
+GtkFileChooserDialog .entry.pathbar:focus {
+    border-color: alpha (@colorAccent, 0.80);
+    box-shadow: inset 0 0 0 1px alpha (@colorAccent, 0.23),
+                0 1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.50);
+}
+
+/*******
+* Gala *
+*******/
+
+.gala-notification {
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom,
+                                  alpha (@bg_color, 0.98),
+                                  alpha (@bg_color, 0.98) 80%,
+                                  alpha (shade(@bg_color, 0.94), 0.98)
+                                  );
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.10),
+                inset 0 1px 0 0 alpha (#fff, 0.90),
+                inset 0 -1px 0 0 alpha (#fff, 0.30),
+                0 0 0 1px alpha (#000, 0.20),
+                0 3px 6px alpha (#000, 0.16),
+                0 3px 6px alpha (#000, 0.23);
+}
+
+.gala-button {
+    padding: 2px;
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    background-image: linear-gradient(to bottom,
+                                  #7e7e7e,
+                                  #3e3e3e
+                                  );
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.02),
+                inset 0 1px 0 0 alpha (#fff, 0.07),
+                inset 0 -1px 0 0 alpha (#fff, 0.01),
+                0 0 0 1px alpha (#000, 0.40),
+                0 3px 6px alpha (#000, 0.16),
+                0 3px 6px alpha (#000, 0.23);
+    text-shadow: 0 1px 1px alpha (#000, 0.6);
+}
+
+/********
+* Geary *
+********/
+
+ConversationListView {
+    -GtkWidget-focus-line-width: 1px;
+    -GtkTreeView-grid-line-width: 0;
+}
+ 
+ConversationListView.view.cell {
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: alpha (#000, 0.2);
+}
+ 
+ConversationListView.view.cell:selected:focus {
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: shade (@colorAccent, 0.8);
+}
+
+/**********
+* Greeter *
+**********/
+
+PantheonGreeter .avatar {
+    border-color: alpha (#000, 0.25);
+}
+
+PantheonGreeter .entry,
+PantheonGreeter .entry:focus {
+    border-radius: 3.5px;
+    padding: 6px 3px;
+    background-image: linear-gradient(to bottom,
+                                  shade (@base_color, 0.93),
+                                  @base_color
+                                  );
+
+    border-color: alpha (@border_color, 0.75);
+    box-shadow: inset 0 1px 1px 0 alpha (#000, 0.20),
+                0 1px 0 alpha (#fff, 0.15);
+}
+
+PantheonGreeter .button.text-button.suggested-action {
+    padding: 6px 32px;
+    border-radius: 3.5px;
+    border-color: rgba(0, 0, 0, 0.10);
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
+                inset 0 1px 0 0 alpha (#fff, 0.45),
+                inset 0 -1px 0 0 alpha (#fff, 0.15),
+                0 1px 0 0 alpha (#fff, 0.15);
+}
+
+PantheonGreeter .button.text-button.suggested-action:active {
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
+                0 1px 0 0 alpha (#fff, 0.15);
+}
+
+/********
+* Noise *
+********/
+/*
+You can type here any CSS rule recognized by GTK+.
+You can temporarily disable this custom CSS by clicking on the "Pause" button above.
+
+Changes are applied instantly and globally, for the whole application.
+*/
+GthBrowser:backdrop,
+ScratchMainWindow:backdrop,
+MarlinViewWindow:backdrop,
+
+ScratchMainWindow .dynamic-notebook .notebook:backdrop,
+MarlinViewWindow .dynamic-notebook .notebook:backdrop,
+
+ScratchMainWindow .view:backdrop,
+MarlinViewWindow .view:backdrop,
+
+GthBrowser,
+ScratchMainWindow,
+MarlinViewWindow,
+
+ScratchMainWindow .dynamic-notebook .notebook,
+MarlinViewWindow .dynamic-notebook .notebook,
+ScratchWidgetsSourceView,
+ScratchMainWindow .view, 
+MarlinViewWindow .view,
+
+NoiseLibraryWindow,
+NoiseLibraryWindow .action-bar  {
+    border-radius: 0 0 6px 6px;
+}
+
+
+GthBrowser.window-frame:backdrop,
+GthBrowser.window-frame,
+ScratchMainWindow.window-frame:backdrop,
+MarlinViewWindow.window-frame:backdrop,
+ScratchMainWindow.window-frame,
+MarlinViewWindow.window-frame,
+MarlinApplication.window-frame,
+NoiseLibraryWindow.window-frame {
+    border-radius: 6px;
+}
+
+
+MarlinViewWindow .cell,
+MarlinViewWindow .cell:backdrop,
+MarlinViewWindow .source-list.view:selected,
+MarlinViewWindow .source-list.view:selected:backdrop,
+MarlinViewWindow .source-list.view:selected:hover,
+MarlinViewWindow .source-list.view:hover,
+MarlinViewWindow .source-list.view:hover:backdrop,
+MarlinViewWindow .source-list.view:backdrop:hover,
+MarlinViewWindow .source-list.view:backdrop,
+MarlinViewWindow  :selected,
+ScratchMainWindow .source-list.view,
+ScratchMainWindow .dynamic-notebook .notebook tab:active,
+ScratchMainWindow  .dynamic-notebook .notebook.header
+MarlinViewWindow .source-list.view:backdrop,
+MarlinViewWindow .source-list.view,
+
+ScratchMainWindow .dynamic-notebook .notebook tab:active:backdrop,
+ScratchMainWindow .dynamic-notebook .notebook.header:backdrop,
+
+MarlinViewWindow .dynamic-notebook .notebook tab:active,
+MarlinViewWindow .dynamic-notebook .notebook.header
+{
+border-radius:0px;
+}
+
+MarlinViewWindow .sidebar,
+MarlinViewWindow .sidebar .view,
+MarlinViewWindow .sidebar GtkScrolledWindow,
+MarlinViewWindow .source-list:backdrop,
+MarlinViewWindow .source-list.view:backdrop,
+MarlinViewWindow .source-list,
+MarlinViewWindow .source-list.view {
+
+    border-radius: 0 0 0 6px;
+    
+}
+/*
+You can type here any CSS rule recognized by GTK+.
+You can temporarily disable this custom CSS by clicking on the "Pause" button above.
+
+Changes are applied instantly and globally, for the whole application.
+*/
+
+
+
+
+/*********
+ * Panel *
+ ********/
+
+
+.panel {
+    background-color: alpha (#000, 0.3);
+    padding:0px;
+
+}
+
+.panel-shadow {
+    background-image: none;
+    background-color: transparent;
+}
+
+.panel .menu {
+    box-shadow: none;
+}
+
+.panel .menu .spinner {
+    opacity: 1;
+}
+
+.panel .menu .window-frame.menu.csd,
+.panel .menu .window-frame.popup.csd {
+    box-shadow: 0 0 0 1px alpha (#000, 0.20),
+                0 10px 20px alpha (#000, 0.19),
+                0 6px 6px alpha (#000, 0.23);
+}
+
+.panel .window-frame.menu.csd,
+.panel .window-frame.popup.csd {
+    box-shadow: none;
+}
+
+.composited-indicator > GtkBox > GtkImage,
+.composited-indicator > GtkBox > GtkLabel,
+.composited-indicator > GtkRevealer {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 1px 2px alpha (#000, 0.6);
+    icon-shadow: 0 1px 2px alpha (#000, 0.6);
+}
+
+.panel.color-light .composited-indicator > GtkBox > GtkImage,
+.panel.color-light .composited-indicator > GtkBox > GtkLabel,
+.panel.color-light .composited-indicator > GtkRevealer {
+	color: alpha (#000, 0.65);
+	text-shadow: 0 1px 0 alpha (#fff, 0.25);
+	icon-shadow: 0 1px 0 alpha (#fff, 0.25);
+}
+
+.composited-indicator > GtkWidget > GtkWidget:first-child {
+    padding: 0 1px;
+}
+
+.panel-app-button > GtkWidget > GtkWidget:first-child {
+    padding: 0 1px 0 3px;
+}
+
+/**********
+ * Photos *
+ *********/
+
+.checkerboard-layout {
+    background-color: #383e41;
+}
+
+.checkboard-layout .item {
+    background-color: #eee;
+    background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), 
+    linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
+    background-size:60px 60px;
+    background-position:0 0, 30px 30px
+}
+
+/*************
+ * Slingshot *
+ ************/
+
+SlingshotWidgetsSearchView GtkButton.flat:hover,
+SlingshotWidgetsSearchView GtkButton.flat:focus {
+    background-color: alpha (#000, 0.20);
+    text-shadow: none;
+}
+
+/***************
+ * Switchboard *
+ **************/
+ 
+SwitchboardCategoryView GtkIconView.view.cell:selected,
+SwitchboardCategoryView GtkIconView.view.cell:selected:focus {
+    border: 2px solid @colorAccent;
+    border-radius: 6px;
+    color: @text_color;
+} 
+
+.hotcorner-display {
+    border-radius: 2px;
+    icon-shadow: 0 3px 6px alpha (#000, 0.16),
+                 0 3px 6px alpha (#000, 0.23);
+}
+
+/************
+ * Terminal *
+ ***********/
+
+PantheonTerminalPantheonTerminalWindow.background {
+   background-color: alpha(#000, 0.8);
+}
