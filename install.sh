@@ -27,14 +27,16 @@ echo "________________________________"
 
 sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo wget https://atom.io/download/deb
+sudo apt update
 
 
 # GITHUB PART: If some repositories are needed, in this section we'll add it.
 git clone https://github.com/zant95/elementary-dropbox /tmp/elementary-dropbox
 bash /tmp/elementary-dropbox/install.sh
 
+#Installing Telegram from the official binary.
+./Telegram
 
-sudo apt update
 
 # gdebi makes everything simpler because it resolves the dependencies.
 sudo apt install gdebi
